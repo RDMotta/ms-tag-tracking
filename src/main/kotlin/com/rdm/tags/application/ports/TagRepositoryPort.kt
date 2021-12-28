@@ -1,11 +1,11 @@
 package com.rdm.tags.application.ports
 
-import com.rdm.tags.adapters.PageInfo
-import com.rdm.tags.adapters.Tag
+import com.rdm.tags.application.domain.PageInfo
+import com.rdm.tags.application.domain.Tag
 import java.util.*
 
 interface TagRepositoryPort {
     fun findAll(pageInfo: PageInfo): List<Tag>
-    fun findById(uuid: UUID): Optional<Tag>
-    fun save(tag: Tag)
+    fun findById(tagId: UUID): Optional<Tag>
+    fun save(tag: Tag): Tag
 }
